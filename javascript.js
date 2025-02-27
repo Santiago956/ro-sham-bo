@@ -12,3 +12,14 @@ function getComputerChoice() {
     }
     return sign;
 }
+
+function getHumanChoice() {
+    let hSign = '';
+    while (!(hSign === 'rock' || hSign === 'paper' || hSign === 'scissors')) {
+        hSign = prompt('Rock, paper or scissors?');
+        hSign = hSign.toLowerCase();
+    }
+    return hSign;
+    
+
+}
