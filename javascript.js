@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let num = Math.random();
     let sign;
@@ -21,5 +24,29 @@ function getHumanChoice() {
     }
     return hSign;
     
+
+}
+
+function round (humanChoice, computerChoice) {
+
+    let hChoice = getHumanChoice();
+    let cChoice = getComputerChoice();
+    
+    if (hChoice === cChoice) {
+        return 'Tie!'
+    }
+    else if (
+    (hChoice === 'rock' && cChoice === 'scissors') || 
+    (hChoice === 'scissors' && cChoice === 'paper') || 
+    (hChoice === 'paper' && cChoice === 'rock')) 
+    {
+        humanScore += 1
+        return `${hChoice} beats ${cChoice}, you win!`
+        
+    }
+    else {
+        computerScore += 1
+        return `${cChoice} beats ${hChoice}, you lose!`
+    }
 
 }
