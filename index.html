@@ -9,8 +9,29 @@
 </head>
 
 <body>
+
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+
+    <hr>
+
+    <div id="result"></div>
+
     <script>
-        console.log(playGame());
+
+
+        let rockBtn = document.querySelector("#rock");
+        let paperBtn = document.querySelector("#paper");
+        let scissorsBtn = document.querySelector("#scissors");
+        let displayScore = document.querySelector("#result");
+
+        rockBtn.addEventListener('click', playGame);
+        paperBtn.addEventListener('click', playGame);
+        scissorsBtn.addEventListener('click', playGame);
+
+
+
     </script>
 </body>
 
