@@ -17,6 +17,8 @@
     <hr>
 
     <div id="result"></div>
+    <br>
+    <div id="final"></div>
 
     <script>
 
@@ -25,10 +27,11 @@
         let paperBtn = document.querySelector("#paper");
         let scissorsBtn = document.querySelector("#scissors");
         let displayScore = document.querySelector("#result");
+        let finalScore = document.querySelector("#final");
 
-        rockBtn.addEventListener('click', playGame);
-        paperBtn.addEventListener('click', playGame);
-        scissorsBtn.addEventListener('click', playGame);
+        rockBtn.addEventListener('click', round);
+        paperBtn.addEventListener('click', round);
+        scissorsBtn.addEventListener('click', round);
 
 
 
